@@ -16,7 +16,7 @@ import type { EvalOutput, FunderRubric, Proposal } from "../src/lib/types";
 
 const PROMPT_VERSION = "v1";
 const PREDICT_THROUGH_YEAR = 2028;
-const CONCURRENCY = 4;
+const CONCURRENCY = 20;
 const MAX_TOKENS = 8000; // reasoning models spend completion tokens on thinking
 
 const MODELS = [
