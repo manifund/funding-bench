@@ -82,6 +82,51 @@ export function spearman(a: number[], b: number[]): number {
   return num / Math.sqrt(da * db);
 }
 
+/**
+ * Unified FundingBench score, 0–100: per-cell accuracy
+ * max(0, 1 − |log₁₀(pred/actual)|/3) — 100 = exact, 0 = off by ≥1000× —
+ * averaged over every scoreable (funder, project) cell for the model.
+ */
+export function cellAccuracy(predUsd: number, actualUsd: number): number {
+  return Math.max(0, 1 - absLogError(predUsd, actualUsd) / 3) * 100;
+}
+
+export interface ModelScore {
+  model: string;
+  /** Mean cell accuracy, 0–100. */
+  score: number;
+  /** Number of scoreable cells (max funders × projects). */
+  n: number;
+}
+
+export function fundingBenchScores(
+  cells: EvalCell[],
+  proposals: Proposal[],
+  groundTruth: Record<string, GroundTruth>
+): ModelScore[] {
+  const bySlug = new Map(proposals.map((p) => [p.slug, p]));
+  const acc = new Map<string, number[]>();
+  for (const c of cells) {
+    if (c.error || !c.raiseByYearUsd) continue;
+    const p = bySlug.get(c.projectSlug);
+    const gt = groundTruth[c.projectSlug];
+    if (!p || !gt) continue;
+    const from = proposalYear(p);
+    const pred = sumYears(c.raiseByYearUsd, from, LAST_ACTUAL_YEAR);
+    const actual = sumYears(actualByYear(gt), from, LAST_ACTUAL_YEAR);
+    (acc.get(c.model) ?? acc.set(c.model, []).get(c.model)!).push(
+      cellAccuracy(pred, actual)
+    );
+  }
+  return [...acc.entries()]
+    .map(([model, xs]) => ({
+      model,
+      score: xs.reduce((s, x) => s + x, 0) / xs.length,
+      n: xs.length,
+    }))
+    .sort((a, b) => b.score - a.score);
+}
+
 export interface ProjectComparison {
   projectSlug: string;
   /** Sum of predicted raise, proposal year → LAST_ACTUAL_YEAR. */

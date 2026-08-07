@@ -1,15 +1,17 @@
 'use client';
 
 import { useMemo, useState } from 'react';
-import { PROMPT_VERSION } from '@/lib/config';
+import { MODEL_META, PROMPT_VERSION } from '@/lib/config';
 import { db } from '@/lib/db';
 import {
   LAST_ACTUAL_YEAR,
   actualByYear,
+  fundingBenchScores,
   proposalYear,
   scoreCells,
   sumYears,
 } from '@/lib/scoring';
+import ScoreChart from './score-chart';
 import type {
   EvalCell,
   FunderRubric,
@@ -40,6 +42,16 @@ export default function ResultsClient({
     () => scoreCells(cells, proposals, groundTruth),
     [cells, proposals, groundTruth]
   );
+  const modelScores = useMemo(
+    () => fundingBenchScores(cells, proposals, groundTruth),
+    [cells, proposals, groundTruth]
+  );
+  const chartPoints = modelScores.flatMap((s) => {
+    const meta = MODEL_META.find((m) => m.id === s.model);
+    return meta
+      ? [{ label: meta.label, released: meta.released, score: s.score, n: s.n }]
+      : [];
+  });
 
   if (isLoading) return <p>loading evals…</p>;
   if (error) return <p className="text-orange-600">error: {error.message}</p>;
@@ -74,6 +86,48 @@ export default function ResultsClient({
         </div>
       ) : (
         <>
+          <section className="mt-8">
+            <h2 className="text-lg font-bold">
+              FundingBench Score <span className="text-orange-600">over time</span>
+            </h2>
+            <p className="mt-1 max-w-2xl text-xs text-neutral-500">
+              Per cell: accuracy = max(0, 1 − |log₁₀(predicted/actual)|/3) × 100
+              — 100 is exact, 0 is off by ≥1000× — averaged over all funder ×
+              project cells. Points at each model&apos;s release date.
+            </p>
+            <div className="mt-4">
+              <ScoreChart points={chartPoints} />
+            </div>
+            <table className="mt-2 w-full max-w-2xl border-collapse text-sm">
+              <thead>
+                <tr className="border-b-2 border-orange-500 text-left">
+                  <th className="py-2 pr-4">model</th>
+                  <th className="py-2 pr-4">released</th>
+                  <th className="py-2 pr-4">score</th>
+                  <th className="py-2">cells</th>
+                </tr>
+              </thead>
+              <tbody>
+                {modelScores.map((s) => {
+                  const meta = MODEL_META.find((m) => m.id === s.model);
+                  return (
+                    <tr
+                      key={s.model}
+                      className="border-b border-neutral-200 dark:border-neutral-800"
+                    >
+                      <td className="py-2 pr-4">{meta?.label ?? s.model}</td>
+                      <td className="py-2 pr-4">{meta?.released ?? '—'}</td>
+                      <td className="py-2 pr-4 font-bold text-orange-600">
+                        {s.score.toFixed(1)}
+                      </td>
+                      <td className="py-2">{s.n}</td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </section>
+
           <div className="mt-6 overflow-x-auto">
             <table className="w-full border-collapse text-sm">
               <thead>
