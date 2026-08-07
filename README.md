@@ -1,18 +1,35 @@
-# Welcome to your InstantDB NextJS app 👋
+# Funding Bench
 
-[InstantDB Docs](https://www.instantdb.com/docs)
-[NextJS Docs](https://nextjs.org/docs)
+A benchmark for how well LLMs assess grant proposals and predict follow-up funding.
+Models see historical AI-safety proposals from [Manifund](https://manifund.org) (outcomes
+stripped), roleplay a real funder (LTFF, SFF, Coefficient Giving), recommend a grant
+amount, and forecast the project's total raise per year. Forecasts are scored against
+ground truth from Manifund transactions + public grant databases.
 
-This is a NextJS project scaffolded with create-instant-app.
+See `INITIAL_SPEC.md` and `PLAN.md` for design notes.
 
-To run the development server:
-`npm run dev`
+## Setup
 
-To push schema changes:
-`npx instant-cli push`
+```bash
+bun install
+cp .env.example .env   # add NEXT_PUBLIC_INSTANT_APP_ID, INSTANT_APP_ADMIN_TOKEN, OPENROUTER_API_KEY
+```
 
-To pull schema changes:
-`npx instant-cli pull`
+## Commands
 
+```bash
+bun run dev               # website at localhost:3000
+bun run fetch-proposals   # rebuild data/proposals.json + Manifund side of ground truth
+bun run merge-research    # merge data/research-raw.json into ground truth + funders
+bun run eval              # run all missing eval cells (models × funders × projects)
+bun run eval -- --dry-run # print the first prompt
+```
 
-Got any feedback or questions? Join our [Discord](https://discord.gg/hgVf9R6SBm)
+## Layout
+
+- `data/proposals.json` — 20 proposals, model-visible fields only
+- `data/ground-truth.json` — funding outcomes by year (never shown to models)
+- `data/funders.json` — 4 funder rubrics used as personas
+- `scripts/` — dataset + eval pipeline (bun)
+- `src/lib/types.ts` — dataset types; `scoring.ts` — metrics (median |log error|, Spearman)
+- Eval results live in InstantDB (`evals` entity); the `/results` page reads them live.

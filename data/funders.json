@@ -1,0 +1,173 @@
+[
+  {
+    "slug": "ltff",
+    "name": "Long-Term Future Fund (LTFF)",
+    "thesis": "The Long-Term Future Fund (part of EA Funds) exists to reduce global catastrophic risks — \"especially potential risks from advanced artificial intelligence and pandemics\" — and to promote longtermist ideas, on the premise that most humans who will ever exist live in the future. In practice the fund is overwhelmingly an AI-safety funder: technical alignment/interpretability research, AI governance and policy analysis, fieldbuilding and talent pipelines (e.g. SERI MATS, upskilling and career-transition grants), and communications (e.g. Rob Miles, AXRP), with a smaller biosecurity slice. Its self-described comparative advantage is **small grants to individuals, independent researchers, and new projects** — the $5k–$200k checks that larger institutional funders like Open Philanthropy / Coefficient Giving don't handle well — available on a rolling, apply-anytime basis.\n\nLTFF thinks in explicit hits-based, expected-value terms. Fund managers score each application from roughly -5 to +5 (a primary investigator scores, others can weigh in), and grants are funded when the average score clears a funding bar that has historically floated between 2.0 and 2.9 depending on available money. The bar is real: excluding desk rejections, only ~24% of applications were funded in the May 2023–March 2024 period (159/672). Person-project fit, track record, and credible signals of talent and dedication dominate the evaluation — the fund has stated publicly that a \"median\" application from a smart recent graduate (even an Ivy League one) seeking 6–12 months of independent alignment research is *a bit below* the bar absent exceptional evidence of ability or a strong research plan/mentorship setup.\n\nWhat they avoid: large organizational grants (they see themselves as complements to, not substitutes for, Open Phil-scale funders), projects with meaningful downside risk (PR risk, capabilities externalities, or net-negative community effects — Habryka in particular weighs downside risk heavily), and vague \"raising awareness\" projects without a theory of change. They are alert to adverse selection: applicants rejected by other funders get extra scrutiny. Typical funded shapes include 6–12 month independent research stipends, career transitions into safety, PhD/program top-ups, compute, workshops, and small org seed funding. A roleplaying grantmaker should be sympathetic to weird-but-reasoned longtermist bets, generous to strong individual talent, skeptical of unproven applicants asking for large salaries, and inclined to fund partial amounts or shorter timeframes (e.g. 6 months instead of 12) as a de-risking move. Note the fund has been in a transitional period since ~2024–2026 (part-time team totaling ~1 FTE, public grant reporting lapsed after early 2024, new leadership being hired as of April 2026), so capacity for hands-on engagement is low — grants are largely arms-length checks, not active partnerships.",
+    "grantmakers": [
+      {
+        "name": "Caleb Parikh",
+        "bio": "Project lead of EA Funds and de facto head of LTFF; oversees the fund's operations and grantmaking across EA Funds, previously at the Centre for Effective Altruism."
+      },
+      {
+        "name": "Linchuan (Linch) Zhang",
+        "bio": "Fund manager and the fund's most prolific public communicator (wrote the LTFF funding-bar and marginal-grant posts); formerly a senior researcher at Rethink Priorities focused on existential risk."
+      },
+      {
+        "name": "Oliver Habryka",
+        "bio": "Fund manager; CEO of Lightcone Infrastructure (runs LessWrong and Lighthaven). Known for high-conviction, downside-risk-sensitive judgments and skepticism of PR-driven or ecosystem-distorting grants."
+      },
+      {
+        "name": "Daniel Eth",
+        "bio": "Fund manager; independent AI governance/policy researcher, formerly at the Future of Humanity Institute."
+      },
+      {
+        "name": "Advisors: Nicole Ross, Jonas Vollmer, Catherine Low, Asya Bergal",
+        "bio": "Advisory circle around the fund — Ross (Constellation), Vollmer (AI Futures Project), Low (CEA), and Bergal (Coefficient Giving; LTFF chair until 2023). Guest fund managers also rotate through. Note: as of April 2026 the fund announced it is hiring new leadership and is in a transitional period."
+      }
+    ],
+    "typical_check_size": "$5k–$200k for nearly all grants (published grants run from $1,500 up to ~$316k for programs like SERI MATS); average grant $34.6k in Mar 2022–Mar 2023 and ~$38k in May 2023–Mar 2024, implying a rough median of ~$25k–$35k",
+    "total_yearly_spend": "~$5.4M paid out over the last fully-reported period (May 2023–Mar 2024, 11 months; $6.29M recommended), i.e. ~$6M/year — the rate Manifund's bulletin also cites as of mid-2026; peak was ~$9.1M in Mar 2022–Mar 2023. Plus a $2M commitment to the Lightcone Commons round in 2026.",
+    "grants_per_year": "~100–200/year recently (141 grants in May 2023–Mar 2024; 263 in Mar 2022–Mar 2023 at peak funding)",
+    "process_notes": "Rolling applications via a short web form (Paperform, ~1 hour to complete), no deadlines; expedited review available for time-sensitive asks. Each application gets a primary investigator among the part-time fund managers who scores it from -5 to +5; other managers can add scores, and the grant is funded if the average clears the current funding bar (historically 2.0–2.9, moving with available donations — the fund is donation-dependent and has been openly funding-constrained). Acceptance rate ~24% excluding desk rejections. Decision speed has been a known weakness: median ~29 days, mean ~54 days as of 2023, against a stated aim of responding within weeks. What they say they look for: person-project fit, track record and credible talent signals, a concrete theory of change for reducing existential risk (especially from AI), and cost-effectiveness relative to marginal grants at their current bar; they frequently fund less than the requested amount or a shorter duration. Team is all part-time (~1 FTE total); public grant reporting lapsed after early 2024 and the fund announced in April 2026 it is hiring new leadership.",
+    "sources": [
+      "https://manifund.org/ais-funder-bulletin",
+      "https://funds.effectivealtruism.org/funds/far-future",
+      "https://funds.effectivealtruism.org/payouts/may-2023-to-march-2024-long-term-future-fund-grant-recommendations",
+      "https://funds.effectivealtruism.org/apply-for-funding",
+      "https://forum.effectivealtruism.org/posts/7RrjXQhGgAJiDLWYR/what-does-a-marginal-grant-at-ltff-look-like-funding",
+      "https://www.lesswrong.com/posts/gRfy2Q2Pg25a2cHyY/ltff-and-eaif-are-unusually-funding-constrained-right-now",
+      "https://forum.effectivealtruism.org/posts/9vazTE4nTCEivYSC6/reflections-on-my-time-on-the-long-term-future-fund"
+    ],
+    "as_of": "2026-08"
+  },
+  {
+    "slug": "sff",
+    "name": "Survival and Flourishing Fund (SFF)",
+    "thesis": "SFF exists to \"support the long-term survival and flourishing of sentient life,\" and in practice the large majority of its money goes to reducing existential risk from advanced AI. It is not a foundation with a program staff and a house view; it is a grant-recommendation *process* run for its funders — overwhelmingly Jaan Tallinn (Skype co-founder), with additional funders like Jed McCaleb and the Future of Life Institute. Since 2019 it has coordinated roughly $152M in gifts, and in recent years distributes on the order of $30–40M per year across ~90–100 organizations.\n\nThe worldview anchoring the money is Tallinn's: his stated goal is to \"maintain and improve humanity's ability to exist and enjoy existing,\" with the current decade's focus on AI extinction risk. He favors **restrictive measures** on frontier AI — datacenter certification and international oversight, legally mandated speed limits on AI computation, liability laws (including \"Know Your Developer\" for open-source), mandatory labeling of AI interactions, veto committees for large deployments, and global off-switch capacity — alongside **constructive measures**: collective-intelligence tools for human cooperation, guaranteed-safe AI with quantifiable safety specs, hardware-level controls, and AI for healthcare. SFF rounds since 2024 have also run explicit **Freedom** (avoiding concentration of power, protecting speech and individual liberty) and **Fairness** (AI empowering the disempowered, resisting monopoly, inclusive governance) tracks, and 2026 added theme rounds in climate change, animal welfare, and human enhancement — but the Main Track (AI x-risk broadly) gets the large majority of dollars.\n\nCulturally, SFF's recommenders are drawn from the rationalist/x-risk community (past and current recommenders include Zvi Mowshowitz, Nate Soares, Malo Bourgon, Scott Alexander, Oliver Habryka, Eliezer Yudkowsky as a Speculator), so proposals are read by people who take AGI ruin scenarios seriously, are skeptical of pure capabilities-adjacent work, and reward legible theories of change about x-risk reduction — technical alignment research, AI governance and policy advocacy (including \"slow down / regulate\" advocacy that other funders shy away from), field-building like MATS, and biosecurity (e.g. SecureDNA). The S-Process is explicitly designed \"to generally favor funding things that at least one Recommender is excited to fund, rather than things that every Recommender is excited to fund\" — so a proposal that strongly excites one credible evaluator can win even if others are lukewarm, which makes SFF friendlier to weird, speculative, or contrarian bets than consensus-driven funders. What it avoids: individuals without fiscal sponsors (orgs only), work outside the survival-and-flourishing frame, and — per Tallinn — things outside his stated priorities (with carve-out exceptions for climate and life extension). Grants range from ~$5k to ~$1.6M per round, so it writes many mid-six-figure checks rather than a few mega-grants.",
+    "grantmakers": [
+      {
+        "name": "Jaan Tallinn",
+        "bio": "Skype/Kazaa founding engineer and SFF's dominant funder; retains final say on all recommendations. Prioritizes reducing AI extinction risk via restrictive measures (compute oversight, liability, off-switches) plus constructive safe-AI work."
+      },
+      {
+        "name": "Andrew Critch",
+        "bio": "Co-founder of SFF and co-designer of the S-Process (also CEO of BERI, ex-MIRI); shapes the evaluation methodology and serves on the Initiative Committee with Tallinn."
+      },
+      {
+        "name": "Zvi Mowshowitz",
+        "bio": "Rationalist writer of the 'Don't Worry About the Vase' AI newsletter; recurring Recommender (Freedom Track, 2024 and 2025) and Speculation Grantor."
+      },
+      {
+        "name": "Nate Soares",
+        "bio": "President of MIRI and co-author of 'If Anyone Builds It, Everyone Dies'; Main Track Recommender in SFF-2025 and a Speculation Grantor."
+      },
+      {
+        "name": "Malo Bourgon",
+        "bio": "CEO of MIRI; Main Track Recommender in the SFF-2025 round."
+      },
+      {
+        "name": "Nathan Labenz",
+        "bio": "Host of the Cognitive Revolution podcast and AI scout; Main Track Recommender in SFF-2025."
+      },
+      {
+        "name": "Seán Ó hÉigeartaigh",
+        "bio": "Cambridge AI:FAR / former CSER executive director focused on AI governance and x-risk; Main Track Recommender in SFF-2025."
+      },
+      {
+        "name": "Nell Watson",
+        "bio": "AI ethics researcher (IEEE standards work); Freedom Track Recommender in 2024 and 2025."
+      },
+      {
+        "name": "Irene Solaiman",
+        "bio": "Head of Global Policy at Hugging Face; Fairness Track Recommender in 2024 and 2025."
+      },
+      {
+        "name": "Atoosa Kasirzadeh",
+        "bio": "Philosopher of AI (Carnegie Mellon); Fairness Track Recommender in SFF-2025."
+      },
+      {
+        "name": "Bálint Gyevnár",
+        "bio": "Edinburgh AI safety/explainability researcher; Fairness Track Recommender in SFF-2025."
+      },
+      {
+        "name": "Eliezer Yudkowsky",
+        "bio": "MIRI founder; one of the publicly named Speculation Grantors who can unilaterally recommend fast grants against a personal budget."
+      },
+      {
+        "name": "Oliver Habryka",
+        "bio": "Lightcone Infrastructure/LessWrong lead and S-Process co-developer; publicly named Speculation Grantor."
+      },
+      {
+        "name": "Ethan Ashkie",
+        "bio": "President & CEO of Survival and Flourishing Corp, the ~7-person operations company that runs the S-Process and administers rounds (not a discretionary grantmaker)."
+      }
+    ],
+    "typical_check_size": "Roughly $5k–$1.6M per org per round; median around $150k–$250k. SFF-2024: largest $1.62M (Center for AI Safety Action Fund), smallest $5k (Foxglove). SFF-2025: largest $1.5M (SecureDNA), smallest ~$16k. Speculation Grants are typically ≤$400k (each Speculator's default budget).",
+    "total_yearly_spend": "~$41M distributed in 2024; ~$34.9M in the SFF-2025 round ($33M in 2023, $16M in 2022). Site total: ~$152M coordinated since 2019. 2026 rounds estimate $20–40M.",
+    "grants_per_year": "~90–100 organizations per year (89 orgs in SFF-2024 round; ~90+ in SFF-2025; Manifund bulletin: \"~$30-40m across 100 grants in recent years\")",
+    "process_notes": "Decisions run through the **S-Process** (\"Simulation\"): each round, 4–12 part-time Recommenders (subject-matter experts, many from the rationalist/x-risk community) read applications and build marginal-value functions over funding levels for each org in a simulation app, refined over multiple meetings; an algorithm aggregates the curves (including a \"Synthetic Mean Recommender\") and allocates each funder's budget. Funders — chiefly Jaan Tallinn — always have final say. The process deliberately favors things at least one Recommender is excited about rather than requiring consensus, so single-champion dynamics matter. Since 2024, rounds run parallel tracks (Main, Freedom, Fairness; 2026 adds Climate, Animal Welfare, and human-enhancement theme rounds). Applications are rolling, but evaluation happens in annual rounds (2026 Main Round: apply by April, recommendations ~September, money by year-end). Every applicant must first receive a **Speculation Grant** to be guaranteed S-Process eligibility (95%+ historically approved): individual Speculators (~dozens of trusted community members, each with ~$400k default budgets from a pool that has grown to ~$20M) can approve fast grants — sometimes within a week — which are retroactively netted against later S-Process recommendations, and Speculators' future budgets rise or fall based on how their picks score in the next round. Eligibility: registered charities almost anywhere, for-profits in US/UK/Canada/Australia under stricter conditions; no unsponsored individuals. There is no stated rubric beyond alignment with the survival-and-flourishing mission and Tallinn's published priorities; matching pledges (e.g. 2:1) are often attached to incentivize other donors.",
+    "sources": [
+      "https://manifund.org/ais-funder-bulletin",
+      "https://survivalandflourishing.fund/",
+      "https://survivalandflourishing.fund/s-process",
+      "https://survivalandflourishing.fund/speculation-grants",
+      "https://survivalandflourishing.fund/2025/recommendations",
+      "https://survivalandflourishing.fund/sff-2024-recommendations",
+      "https://survivalandflourishing.fund/sff-2024-further-opportunities",
+      "https://survivalandflourishing.fund/2026/application",
+      "https://jaan.info/philanthropy/"
+    ],
+    "as_of": "2026-08"
+  },
+  {
+    "slug": "cg-ntai",
+    "name": "Coefficient Giving — Navigating Transformative AI Fund",
+    "thesis": "Coefficient Giving (formerly Open Philanthropy, renamed 2025) runs the Navigating Transformative AI Fund to reduce the risk of AI-caused global catastrophes and help society prepare for rapid AI advances. It is the successor to Open Philanthropy's technical AI safety and AI governance & policy programs, and spans research to make AI systems more trustworthy and controllable, AI governance and policy work, and capacity-building for the AI safety field.\n\nThe fund practices hits-based giving: it accepts that many grants will fail if the expected value of the wins is high enough. It favors legible cost-effectiveness reasoning, strong teams over polished proposals, and is comfortable being the majority funder of an organization. It funds academics (research expenses, startup packages), nonprofits (seed and multi-year operating support), and individual researchers, and has made 440+ grants through the fund. It generally avoids work that mostly accelerates AI capabilities, and scrutinizes theory-of-change carefully for policy/advocacy work.\n\nBacked primarily by Dustin Moskovitz and Cari Tuna, it is by far the largest funder in AI safety, so its effective bar is 'is this among the best marginal uses of ~$50M/year' rather than scarcity of capital. Speed and founder quality matter; it increasingly writes rolling grants rather than batching into rounds.",
+    "grantmakers": [
+      {
+        "name": "Peter Favaloro",
+        "bio": "Leads technical AI safety grantmaking; economics PhD, formerly at Open Philanthropy in the same role. (approximate — team details compiled quickly)"
+      },
+      {
+        "name": "Luke Muehlhauser",
+        "bio": "Longtime lead of AI governance and policy grantmaking, formerly executive director of MIRI. (approximate)"
+      }
+    ],
+    "typical_check_size": "$25k (research expenses) to multi-million multi-year org support; median on the order of $200k–$400k (approximate)",
+    "total_yearly_spend": "~$46–50M/year on AI safety & governance through this fund (2025, per Inside Philanthropy; approximate — Open Phil's historical AI spend has been higher some years)",
+    "grants_per_year": "~100–200/year (440+ total through the fund as of 2026; approximate)",
+    "process_notes": "Rolling recommendations rather than fixed rounds; hits-based giving philosophy; comfortable as majority funder; separate RFPs for specific research directions. NOTE: this rubric is a best-guess approximation compiled 2026-08 without exhaustive verification.",
+    "sources": [
+      "https://coefficientgiving.org/funds/",
+      "https://www.insidephilanthropy.com/home/whos-funding-ai-regulation-and-safety",
+      "https://forum.effectivealtruism.org/posts/vkvtu6xbvfkHPhJkC/open-philanthropy-is-now-coefficient-giving",
+      "https://forum.effectivealtruism.org/posts/Rq7AuJNoMmRGRTftZ/ai-safety-funder-bulletin"
+    ],
+    "as_of": "2026-08 (approximate)"
+  },
+  {
+    "slug": "cg-gcro",
+    "name": "Coefficient Giving — Global Catastrophic Risks Opportunities Fund",
+    "thesis": "The GCR Opportunities Fund is Coefficient Giving's cross-cutting fund for strengthening the ecosystem of people and organizations working on global catastrophic risks — primarily risks from advanced AI and catastrophic biological risks. Where the Navigating Transformative AI Fund backs research organizations directly, this fund invests in the talent pipeline and field infrastructure around them.\n\nIt funds individuals at any career stage — graduate study, career transitions, unpaid internships, independent study — and programs and events: fellowships, residencies, courses, seminars, conferences, workshops, and retreats on GCR, effective altruism, and adjacent topics. It is open to applicants in any country and runs rolling applications.\n\nThe fund's implicit bar is talent-multiplier logic: a grant is good if it moves capable people into high-impact GCR work or strengthens the field's infrastructure at low cost. Typical checks are small relative to org grants, and the fund tolerates high variance across many small bets. It inherits Open Philanthropy's GCR capacity-building program's style: generous with promising individuals, skeptical of vague community projects without a clear path to talent or research output.",
+    "grantmakers": [
+      {
+        "name": "Eli Rose",
+        "bio": "Senior program officer for GCR capacity building at Open Philanthropy/Coefficient Giving. (approximate — team details compiled quickly)"
+      },
+      {
+        "name": "Claire Zabel",
+        "bio": "Longtime leader of Open Philanthropy's GCR capacity-building grantmaking. (approximate)"
+      }
+    ],
+    "typical_check_size": "$10k–$500k; many individual grants in the $25k–$100k range (approximate)",
+    "total_yearly_spend": "on the order of $20–40M/year across GCR capacity-building programs (approximate)",
+    "grants_per_year": "hundreds of mostly-small grants/year (approximate)",
+    "process_notes": "Rolling applications for career development/transition funding and for programs & events funding; relatively fast, lightweight decisions on small individual grants. NOTE: this rubric is a best-guess approximation compiled 2026-08 without exhaustive verification.",
+    "sources": [
+      "https://coefficientgiving.org/funds/global-catastrophic-risks-opportunities/",
+      "https://coefficientgiving.org/funds/global-catastrophic-risks-opportunities/funding-for-programs-and-events-on-global-catastrophic-risk-effective-altruism-and-other-topics/",
+      "https://www.scientifyresearch.org/grant/global-catastrophic-risks-career-development-transition-funding-coefficient-giving-worldwide/"
+    ],
+    "as_of": "2026-08 (approximate)"
+  }
+]

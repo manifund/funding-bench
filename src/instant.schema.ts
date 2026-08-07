@@ -13,10 +13,26 @@ const _schema = i.schema({
       imageURL: i.string().optional(),
       type: i.string().optional(),
     }),
-    todos: i.entity({
-      text: i.string(),
-      done: i.boolean(),
-      createdAt: i.number(),
+    runs: i.entity({
+      createdAt: i.number().indexed(),
+      promptVersion: i.string(),
+      notes: i.string().optional(),
+    }),
+    evals: i.entity({
+      // one row per (promptVersion, model, funderSlug, projectSlug)
+      cellKey: i.string().unique().indexed(),
+      promptVersion: i.string().indexed(),
+      model: i.string().indexed(),
+      funderSlug: i.string().indexed(),
+      projectSlug: i.string().indexed(),
+      grantRecUsd: i.number().optional(),
+      // {"2023": 150000, ...} predicted total raised per calendar year
+      raiseByYearUsd: i.json().optional(),
+      reasoning: i.string().optional(),
+      error: i.string().optional(),
+      latencyMs: i.number().optional(),
+      costUsd: i.number().optional(),
+      createdAt: i.number().indexed(),
     }),
   },
   links: {
@@ -33,12 +49,12 @@ const _schema = i.schema({
         label: "linkedGuestUsers",
       },
     },
-  },
-  rooms: {
-    todos: {
-      presence: i.entity({}),
+    evalRun: {
+      forward: { on: "evals", has: "one", label: "run" },
+      reverse: { on: "runs", has: "many", label: "evals" },
     },
   },
+  rooms: {},
 });
 
 // This helps TypeScript display nicer intellisense

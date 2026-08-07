@@ -1,169 +1,86 @@
-"use client";
+import Link from 'next/link';
+import { getFunders, getProposals } from '@/lib/data';
 
-import { db } from "@/lib/db";
-import { type AppSchema } from "@/instant.schema";
-import { id, InstaQLEntity } from "@instantdb/react";
+export default function Home() {
+  const proposals = getProposals();
+  const funders = getFunders();
+  const cohorts = {
+    named: proposals.filter((p) => p.cohort === 'named').length,
+    funded: proposals.filter((p) => p.cohort === 'funded').length,
+    random: proposals.filter((p) => p.cohort === 'random').length,
+  };
 
-type Todo = InstaQLEntity<AppSchema, "todos">;
-
-const room = db.room("todos");
-
-function App() {
-  // Read Data
-  const { isLoading, error, data } = db.useQuery({ todos: {} });
-  const { peers } = db.rooms.usePresence(room);
-  const numUsers = 1 + Object.keys(peers).length;
-  if (isLoading) {
-    return;
-  }
-  if (error) {
-    return <div className="text-red-500 p-4">Error: {error.message}</div>;
-  }
-  const { todos } = data;
   return (
-    <div className="font-mono min-h-screen flex justify-center items-center flex-col space-y-4">
-      <div className="text-xs text-gray-500">
-        Number of users online: {numUsers}
-      </div>
-      <h2 className="tracking-wide text-5xl text-gray-300">todos</h2>
-      <div className="border border-gray-300 max-w-xs w-full">
-        <TodoForm todos={todos} />
-        <TodoList todos={todos} />
-        <ActionBar todos={todos} />
-      </div>
-      <div className="text-xs text-center">
-        Open another tab to see todos update in realtime!
-      </div>
-    </div>
-  );
-}
+    <div className="space-y-8">
+      <section>
+        <h1 className="text-2xl font-bold">
+          Can LLMs judge grant proposals<span className="text-orange-600">?</span>
+        </h1>
+        <p className="mt-4 max-w-2xl leading-relaxed">
+          Funding Bench shows models historical AI-safety grant proposals from{' '}
+          <a href="https://manifund.org" className="underline">
+            Manifund
+          </a>{' '}
+          — with all funding outcomes stripped — and asks them, in the persona
+          of a real funder, to (1) recommend a grant amount and (2) predict how
+          much the project will actually raise, year by year. Predictions are
+          scored against what happened.
+        </p>
+      </section>
 
-// Write Data
-// ---------
-function addTodo(text: string) {
-  db.transact(
-    db.tx.todos[id()].update({
-      text,
-      done: false,
-      createdAt: Date.now(),
-    }),
-  );
-}
-
-function deleteTodo(todo: Todo) {
-  db.transact(db.tx.todos[todo.id].delete());
-}
-
-function toggleDone(todo: Todo) {
-  db.transact(db.tx.todos[todo.id].update({ done: !todo.done }));
-}
-
-function deleteCompleted(todos: Todo[]) {
-  const completed = todos.filter((todo) => todo.done);
-  const txs = completed.map((todo) => db.tx.todos[todo.id].delete());
-  db.transact(txs);
-}
-
-function toggleAll(todos: Todo[]) {
-  const newVal = !todos.every((todo) => todo.done);
-  db.transact(
-    todos.map((todo) => db.tx.todos[todo.id].update({ done: newVal })),
-  );
-}
-
-// Components
-// ----------
-function ChevronDownIcon() {
-  return (
-    <svg viewBox="0 0 20 20">
-      <path
-        d="M5 8 L10 13 L15 8"
-        stroke="currentColor"
-        fill="none"
-        strokeWidth="2"
-      />
-    </svg>
-  );
-}
-
-function TodoForm({ todos }: { todos: Todo[] }) {
-  return (
-    <div className="flex items-center h-10 border-b border-gray-300">
-      <button
-        className="h-full px-2 border-r border-gray-300 flex items-center justify-center"
-        onClick={() => toggleAll(todos)}
-      >
-        <div className="w-5 h-5">
-          <ChevronDownIcon />
-        </div>
-      </button>
-      <form
-        className="flex-1 h-full"
-        onSubmit={(e) => {
-          e.preventDefault();
-          const input = e.currentTarget.input as HTMLInputElement;
-          addTodo(input.value);
-          input.value = "";
-        }}
-      >
-        <input
-          className="w-full h-full px-2 outline-none bg-transparent"
-          autoFocus
-          placeholder="What needs to be done?"
-          type="text"
-          name="input"
-        />
-      </form>
-    </div>
-  );
-}
-
-function TodoList({ todos }: { todos: Todo[] }) {
-  return (
-    <div className="divide-y divide-gray-300">
-      {todos.map((todo) => (
-        <div key={todo.id} className="flex items-center h-10">
-          <div className="h-full px-2 flex items-center justify-center">
-            <div className="w-5 h-5 flex items-center justify-center">
-              <input
-                type="checkbox"
-                className="cursor-pointer"
-                checked={todo.done}
-                onChange={() => toggleDone(todo)}
-              />
-            </div>
+      <section className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+        <Link
+          href="/projects"
+          className="border-2 border-neutral-300 p-4 hover:border-orange-500 dark:border-neutral-700"
+        >
+          <div className="text-3xl font-bold text-orange-600">
+            {proposals.length}
           </div>
-          <div className="flex-1 px-2 overflow-hidden flex items-center">
-            {todo.done ? (
-              <span className="line-through">{todo.text}</span>
-            ) : (
-              <span>{todo.text}</span>
-            )}
+          <div className="text-sm">
+            proposals ({cohorts.named} large, {cohorts.funded} well-funded,{' '}
+            {cohorts.random} random)
           </div>
-          <button
-            className="h-full px-2 flex items-center justify-center text-gray-300 hover:text-gray-500"
-            onClick={() => deleteTodo(todo)}
-          >
-            X
-          </button>
-        </div>
-      ))}
+        </Link>
+        <Link
+          href="/funders"
+          className="border-2 border-neutral-300 p-4 hover:border-orange-500 dark:border-neutral-700"
+        >
+          <div className="text-3xl font-bold text-orange-600">
+            {funders.length}
+          </div>
+          <div className="text-sm">funder rubrics (LTFF, SFF, 2× Coefficient Giving)</div>
+        </Link>
+        <Link
+          href="/results"
+          className="border-2 border-neutral-300 p-4 hover:border-orange-500 dark:border-neutral-700"
+        >
+          <div className="text-3xl font-bold text-orange-600">5</div>
+          <div className="text-sm">models evaluated → results</div>
+        </Link>
+      </section>
+
+      <section className="max-w-2xl space-y-3 text-sm leading-relaxed">
+        <h2 className="text-lg font-bold">Method</h2>
+        <p>
+          Each model sees a proposal exactly as it appeared at posting time
+          (title, description, creator, ask range) plus a rubric describing one
+          funder&apos;s thesis, team, and check sizes. It must reason briefly,
+          then output a grant recommendation and a per-year forecast of total
+          money raised through 2028.
+        </p>
+        <p>
+          Scoring compares forecasts to ground truth assembled from Manifund
+          transactions plus public grant databases (Coefficient Giving, SFF,
+          LTFF payout reports). Headline metrics: median absolute log-error of
+          predicted vs. actual raise, and Spearman rank correlation across
+          projects.
+        </p>
+        <p className="text-neutral-500">
+          Known limitation: models may have memorized outcomes for famous
+          projects (Apollo, Timaeus, Lightcone…). The &quot;named&quot; cohort
+          is flagged so you can compare.
+        </p>
+      </section>
     </div>
   );
 }
-
-function ActionBar({ todos }: { todos: Todo[] }) {
-  return (
-    <div className="flex justify-between items-center h-10 px-2 text-xs border-t border-gray-300">
-      <div>Remaining todos: {todos.filter((todo) => !todo.done).length}</div>
-      <button
-        className=" text-gray-300 hover:text-gray-500"
-        onClick={() => deleteCompleted(todos)}
-      >
-        Delete Completed
-      </button>
-    </div>
-  );
-}
-
-export default App;

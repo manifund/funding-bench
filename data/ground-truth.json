@@ -1,0 +1,534 @@
+{
+  "scoping-developmental-interpretability-xg55b33wsfc": {
+    "manifund_raised_by_year": {
+      "2023": 144650
+    },
+    "manifund_total_raised": 144650,
+    "stage": "complete",
+    "external_funding": [
+      {
+        "funder": "Survival and Flourishing Fund (Jaan Tallinn, SFF-2023-H2 S-process)",
+        "amount_usd": 426000,
+        "year": 2023,
+        "date": "2023-12",
+        "source_url": "https://survivalandflourishing.fund/sff-2023-h2-recommendations",
+        "confidence": "high",
+        "note": "'General Support of Timaeus', paid via fiscal sponsor Ashgro Inc. Timaeus/Manifund publicly describe the fall-2023 SFF funding as $455k, likely $426k S-process plus a ~$29k SFF speculation grant; only the $426k is itemized on SFF's page."
+      },
+      {
+        "funder": "Survival and Flourishing Fund (SFF-2024 S-process)",
+        "amount_usd": 343000,
+        "year": 2024,
+        "date": "",
+        "source_url": "https://survivalandflourishing.fund/sff-2024-recommendations",
+        "confidence": "high",
+        "note": "Total funding recommended to Timaeus in SFF-2024 round (all from Main Track), distributed second half of 2024."
+      },
+      {
+        "funder": "Open Philanthropy (now Coefficient Giving)",
+        "amount_usd": 1557000,
+        "year": 2025,
+        "date": "2025-01",
+        "source_url": "http://web.archive.org/web/20250601162042/https://www.openphilanthropy.org/grants/timaeus-operating-expenses/",
+        "confidence": "high",
+        "note": "'Timaeus — Operating Expenses': two grants totaling $1,557,000 to Timaeus Research, award date January 2025. Original page (openphilanthropy.org/grants/timaeus-operating-expenses/) now redirects since the Coefficient Giving rebrand; verified via Wayback snapshot."
+      },
+      {
+        "funder": "Coefficient Giving (formerly Open Philanthropy)",
+        "amount_usd": 2000000,
+        "year": 2025,
+        "date": "",
+        "source_url": "https://manifund.substack.com/p/when-you-donate-can-matter-more-than",
+        "confidence": "medium",
+        "note": "Manifund's writeup says Timaeus received 'two larger grants of $2m and $1.5m from Coefficient Giving' in 2025; the $1.5m matches the January 2025 $1,557,000 grant above, so this $2m is treated as a separate 2025 grant. Coefficient's grants database blocks automated access, so the exact figure/date could not be independently verified."
+      },
+      {
+        "funder": "Survival and Flourishing Fund (SFF-2025 S-process)",
+        "amount_usd": 276000,
+        "year": 2025,
+        "date": "",
+        "source_url": "https://survivalandflourishing.fund/2025/recommendations",
+        "confidence": "high",
+        "note": "General support to Timaeus Research Inc. ($80k Main Track, $195k Freedom Track, $1k synthetic mean). An additional $206k matching pledge at 0.75x (deadline Sept 2026) is not counted here."
+      }
+    ],
+    "notes": "Numbers track Timaeus the organization (initially fiscally sponsored by Ashgro, later Timaeus Research Inc.), which grew directly out of this 'Scoping Developmental Interpretability' 6-month project by Jesse Hoogland et al. — the Manifund grant was its first research funding. manifund_raised_by_year counts only this project slug ($144,650 in 2023, vs the ~$142-143k figure Timaeus cites, which excludes a small later donation); Timaeus also raised on separate later Manifund projects not counted here. Timaeus additionally received money from LTFF, OpenAI Superalignment Fast Grants, and the AI Safety Tactical Opportunities Fund (AISTOF), but I found no public per-grant amounts for those. In June 2026 Timaeus merged into Resolution, which received a $160M grant from Coefficient Giving (roughly half attributed to Timaeus's track record, half to UK AISI staff); that grant went to the merged entity and is deliberately not listed as a Timaeus grant row.",
+    "fetched_at": "2026-08-07",
+    "research_summary": "The project launched Timaeus (announced October 2023), the AI-safety org pursuing singular learning theory / developmental interpretability. It grew from a ~$145k initial budget to ~$2.5M funding for 2025 and a team of 8-12, with successive support from SFF (2023, 2024, 2025), Open Philanthropy/Coefficient Giving (~$3.5M across 2025), and smaller LTFF/OpenAI Superalignment/AISTOF grants. In June 2026 Timaeus merged into Resolution, recipient of Coefficient Giving's largest-ever AI safety grant ($160M)."
+  },
+  "apollo-research-scale-up-interpretability--behavioral-model-evals-research": {
+    "manifund_raised_by_year": {
+      "2023": 325409,
+      "2024": 14000
+    },
+    "manifund_total_raised": 339409,
+    "stage": "complete",
+    "external_funding": [
+      {
+        "funder": "Open Philanthropy",
+        "amount_usd": 1535480,
+        "year": 2023,
+        "date": "2023-06",
+        "source_url": "http://web.archive.org/web/20230912095624/https://www.openphilanthropy.org/grants/apollo-research-startup-funding/",
+        "confidence": "high",
+        "note": "'Apollo Research — Startup Funding', award date June 2023 (predates this Manifund proposal by ~1 month). Original openphilanthropy.org page now redirects post-Coefficient-Giving rebrand; verified via Wayback snapshot."
+      },
+      {
+        "funder": "Survival and Flourishing Fund / Jaan Tallinn (SFF-2023-H2 S-process)",
+        "amount_usd": 882500,
+        "year": 2023,
+        "date": "2023-12",
+        "source_url": "https://survivalandflourishing.fund/sff-2023-h2-recommendations",
+        "confidence": "high",
+        "note": "General support, total $882,500 from Jaan Tallinn split across vehicles: $277,169 via LSG, $490,000 via SFF, $115,331 via SFC."
+      },
+      {
+        "funder": "Open Philanthropy",
+        "amount_usd": 2178700,
+        "year": 2024,
+        "date": "2024-05",
+        "source_url": "http://web.archive.org/web/20240717140504/https://www.openphilanthropy.org/grants/apollo-research-general-support/",
+        "confidence": "high",
+        "note": "'Apollo Research — General Support', award date May 2024, follow-on to the June 2023 startup grant."
+      },
+      {
+        "funder": "Survival and Flourishing Fund (SFF-2024 S-process)",
+        "amount_usd": 251000,
+        "year": 2024,
+        "date": "",
+        "source_url": "https://survivalandflourishing.fund/sff-2024-recommendations",
+        "confidence": "high",
+        "note": "Total funding recommended in SFF-2024 round ($224k Main Track + $26k Freedom Track; sums with rounding), distributed second half of 2024."
+      }
+    ],
+    "notes": "Numbers track Apollo Research the organization (fiscally sponsored by Rethink Priorities until it became a Public Benefit Corporation in April 2026), not just the 3 marginal hires this Manifund proposal was scoped to fund — donors and external funders all gave to the org's general budget. Longterm Wiki's database shows 6 grants totaling $5.2M to Apollo, consistent with the four grants above ($4.85M) plus the ~$339k raised on Manifund. No Apollo grants appear in the SFF-2025 round, and I found no public 2025-2026 grant amounts (Coefficient Giving's database blocks automated access; searches for 2025/2026 Coefficient, Founders Pledge, and Halcyon grants to Apollo returned nothing). By 2025-2026 Apollo increasingly earned commercial revenue from frontier-lab evals work, which is not grant funding and is not counted.",
+    "fetched_at": "2026-08-07",
+    "research_summary": "Apollo Research scaled from a ~15-person startup in mid-2023 into a leading AI evals/interpretability org known for scheming and deception evaluations of frontier models (work with OpenAI, Anthropic, and UK AISI). It raised ~$4.85M in external grants 2023-2024 from Open Philanthropy and SFF/Jaan Tallinn on top of ~$339k via Manifund, and in April 2026 announced it was spinning out of fiscal sponsorship into a Public Benefit Corporation amid growing market demand for its safety evaluations."
+  },
+  "support-for-deep-coverage-of-china-and-ai": {
+    "manifund_raised_by_year": {
+      "2023": 17550,
+      "2024": 20017
+    },
+    "manifund_total_raised": 37567,
+    "stage": "active",
+    "external_funding": [],
+    "notes": "Numbers track ChinaTalk (Jordan Schneider's media org/newsletter/podcast), which is the entity behind this Manifund project; the Manifund donations went to Jordan Schneider personally for ChinaTalk. External funders are confirmed but none disclose amounts publicly, so external_funding is empty rather than estimated. Confirmed external funders: (1) Coefficient Giving (formerly Open Philanthropy) made a 'generous new grant' announced Aug 3, 2026 that funded hiring plus a $50k contest (https://www.chinatalk.media/p/50k-chinatalk-submission-hiring-contest) — amount undisclosed and not yet in the Coefficient grants database (database pages returned 403 to automated fetch; site: searches found no grant page); (2) ChinaTalk's Jan 22, 2025 post 'What's Next for ChinaTalk' (https://www.chinatalk.media/p/whats-next-for-chinatalk) credits Emergent Ventures, Schmidt Futures, the AI Safety Tactical Opportunities Fund, and Evan Hubinger (Hubinger's $20k is the Aug 2024 Manifund donation, already counted above); (3) ChinaTalk's About page (https://www.chinatalk.media/about) lists grants from Coefficient Giving, Emergent Ventures, Macroscopic Ventures, the Andrew Marshall Foundation, CSIS, and the US-Japan Foundation — no amounts or dates given. Emergent Ventures support appears to predate the 2023 proposal. Searches performed: Open Philanthropy/Coefficient grants database queries (direct fetch + site: search + amount searches), SFF grants list (no ChinaTalk entries), Emergent Ventures cohort searches, AI Safety Tactical Opportunities Fund / Schmidt Futures + ChinaTalk searches, and ChinaTalk's own about/annual-review posts. ChinaTalk also has advertising/sponsorship revenue (Cognition, Accenture Federal Services, etc.), which is commercial revenue, not grants.",
+    "fetched_at": "2026-08-07",
+    "research_summary": ""
+  },
+  "lightcone-infrastructure": {
+    "manifund_raised_by_year": {
+      "2024": 79885,
+      "2025": 87480,
+      "2026": 71100
+    },
+    "manifund_total_raised": 238465,
+    "stage": "active",
+    "external_funding": [
+      {
+        "funder": "Survival and Flourishing Fund (Jaan Tallinn)",
+        "amount_usd": 513500,
+        "year": 2024,
+        "date": "2024",
+        "source_url": "https://survivalandflourishing.fund/",
+        "confidence": "high",
+        "note": "SFF-2024 S-Process round recommendation to Lightcone Infrastructure, funded by Jaan Tallinn; verified on SFF's grants table."
+      },
+      {
+        "funder": "Survival and Flourishing Fund (Jaan Tallinn)",
+        "amount_usd": 661000,
+        "year": 2025,
+        "date": "2025",
+        "source_url": "https://survivalandflourishing.fund/",
+        "confidence": "high",
+        "note": "SFF-2025 round main grant to Lightcone Infrastructure; verified on SFF's grants table."
+      },
+      {
+        "funder": "Survival and Flourishing Fund — Matching Pledge",
+        "amount_usd": 650000,
+        "year": 2025,
+        "date": "2025",
+        "source_url": "https://survivalandflourishing.fund/",
+        "confidence": "high",
+        "note": "SFF-2025 Matching Pledge award (listed with ‡ on SFF site), on top of the $661k main grant; the Dec 2025 fundraiser post mentions an SFF match of 12.5% on donations up to $2.6M."
+      },
+      {
+        "funder": "Individual donors — LessWrong/Lighthaven 2025 fundraiser (Nov 2024–Jan 2025)",
+        "amount_usd": 2100000,
+        "year": 2025,
+        "date": "2025-01",
+        "source_url": "https://www.greaterwrong.com/posts/5n2ZQcbc7r4R8mvqc/the-lightcone-is-nothing-without-its-people",
+        "confidence": "high",
+        "note": "Habryka's Jan 19, 2025 update: 'raised over $2.1M when the fundraiser closed' vs a $3M goal, with another $100k-$200k expected from pending commitments. This is an aggregate of many individual donations across channels (every.org, crypto, Manifund, etc.); a small portion (~$30k of Dec 2024 Manifund donations) overlaps with the manifund_raised_by_year figures."
+      },
+      {
+        "funder": "Survival and Flourishing Corp (Jaan Tallinn) — advance for FTX settlement",
+        "amount_usd": 1700000,
+        "year": 2024,
+        "date": "2024",
+        "source_url": "https://www.greaterwrong.com/posts/5n2ZQcbc7r4R8mvqc/the-lightcone-is-nothing-without-its-people",
+        "confidence": "high",
+        "note": "Not a pure grant: SFC provided $1.7M to fund Lightcone's settlement with the FTX estate, structured as an advance against future SFF grants (future SFF funding reduced 50% until $1.29M accumulates). Counting this AND full subsequent SFF grants would double-count."
+      }
+    ],
+    "notes": "Numbers track Lightcone Infrastructure the organization (LessWrong.com + Lighthaven campus + adjacent projects), which is exactly what the Manifund page fundraises for — the Manifund project is one of several donation channels for the same org, so Manifund totals are a subset of overall fundraising (e.g., the >$2.1M 2025 fundraiser total includes some Manifund donations). Manifund by-year figures include a $24,628 EA Community Choice payout (Sep 2024) and a $750 self-donation by Habryka. Other funding not quantifiable: an EA Infrastructure Fund grant plus additional SFF funds received mid-2025 to cover a deferred $1M mortgage interest payment (amounts not published; per the Dec 13, 2025 fundraiser post https://www.greaterwrong.com/posts/eKGdCNdKjvTBG9i6y/toss-a-bitcoin-to-your-lightcone-lw-lighthaven-s-2026, which targets $3M for 2026). Open Philanthropy/Coefficient Giving (historically Lightcone's largest funder) stopped funding Lightcone from 2024 onward for reputational/Good Ventures reasons. Pre-2024 grants (SFF 2023: $1.733M + $410k; FTX Future Fund 2022, partially returned) are excluded as they predate the May 2024 proposal. In July 2026 Lightcone launched Lightcone Commons, a grantmaking platform with ~$5M from Dustin Moskovitz for its first round — that money is for regranting through the platform, not Lightcone operating funding. Lighthaven also generates ~$3.2M/yr in program revenue (commercial, not grants).",
+    "fetched_at": "2026-08-07",
+    "research_summary": ""
+  },
+  "forethought": {
+    "manifund_raised_by_year": {
+      "2026": 365270
+    },
+    "manifund_total_raised": 365270,
+    "stage": "active",
+    "external_funding": [
+      {
+        "funder": "Survival and Flourishing Fund (SFF-2025 round)",
+        "amount_usd": 103000,
+        "year": 2025,
+        "date": "2025",
+        "source_url": "https://survivalandflourishing.fund/2025/recommendations",
+        "confidence": "high",
+        "note": "Grant to 'Forethought Research' for general support; composed of Main $66k / Freedom $6k / Fairness $17k / Mean $14k."
+      }
+    ],
+    "notes": "Numbers track Forethought (forethought.org, aka Forethought Research), the AI macrostrategy nonprofit cofounded mid-2024 by Max Dalton, Will MacAskill, Tom Davidson, and Amrit Sidhu-Brar — not the older, unrelated Forethought Foundation for Global Priorities Research or the Forethought AI startup. The Manifund page was one channel of their org-wide 2025-26 fundraiser (ask $2.4M baseline / $3.9M expansion through June 2027; baseline goal met by March 2026). Their startup funding through ~March 2026 came from two undisclosed high-net-worth donors with no public amounts. Longview Philanthropy and Coefficient Giving (formerly Open Philanthropy) have evaluated and endorsed Forethought and recommend it to their donor networks, but I could not verify any direct grant from either (Coefficient Giving's grants database returned 403 to automated fetch; web searches found no grant page). 2026 baseline budget is $4.1M, so most of what they raised beyond Manifund + SFF is unattributable to specific funders/amounts.",
+    "fetched_at": "2026-08-07",
+    "research_summary": "Forethought launched publicly in March 2025 as an AI macrostrategy research group and published 20+ papers (including the AI-enabled coups work) in its first year. Its Dec 2025 Manifund proposal was part of an org-wide fundraiser; the baseline goal ($2.4M for operations through June 2027) was fulfilled by March 2026, including $365k via Manifund led by Neel Nanda ($200k) and Ethan Perez ($100k). It also received a $103k SFF-2025 general-support grant and planned another funding round in August 2026 for expenses through June 2028."
+  },
+  "independent-researcher": {
+    "manifund_raised_by_year": {
+      "2023": 51400
+    },
+    "manifund_total_raised": 51400,
+    "stage": "complete",
+    "external_funding": [
+      {
+        "funder": "Long-Term Future Fund (EA Funds)",
+        "amount_usd": 50000,
+        "year": 2023,
+        "date": "2023-02",
+        "source_url": "https://funds.effectivealtruism.org/payouts/april-2023-long-term-future-fund-grant-recommendations",
+        "confidence": "high",
+        "note": "6-month research stipend for AI alignment research on circuits in decision transformers. Granted Feb 2023 (reported April 2023), i.e. a few months BEFORE the July 2023 Manifund proposal, but within the proposal year."
+      }
+    ],
+    "notes": "Numbers track Joseph Bloom as an individual independent researcher (this project), not Decode Research/Neuronpedia, the nonprofit he later cofounded, which raised separately (LTFF ~1yr of Neuronpedia funding, Open Philanthropy, Anthropic, AISTOF, and its own Manifund project 'neuronpedia---ai-safety-game'). One known-but-unquantified item: his Manifund progress update confirms he received a Lightspeed Grant (~6 more months of funding, awarded ~late 2023), but no public source states the amount, so it is deliberately excluded from external_funding rather than estimated. He also received a MATS stipend (Neel Nanda stream, 2024, amount not public) and then took employment (not grants) at UK AI Security Institute, where he is Head of Model Transparency. Searches tried: LTFF/EA Funds payout reports for 'Joseph Bloom'; 'Joseph Bloom Lightspeed Grants amount'; Open Phil/Coefficient grants DB for 'Decode Research'/'Neuronpedia'; his CV PDF (no funding section); SFF 2025 recommendations (no Decode/Neuronpedia grant).",
+    "fetched_at": "2026-08-07",
+    "research_summary": "After raising $51.4k on Manifund in mid-2023, Bloom received a Lightspeed grant extending his independent runway, pivoted from decision-transformer circuits to sparse autoencoders (releasing SAELens and open-source residual-stream SAEs), cofounded the nonprofit Decode Research around Neuronpedia (which partnered with DeepMind on Gemma Scope), and subsequently joined the UK AI Security Institute as Head of Model Transparency."
+  },
+  "10th-edition-of-ai-safety-camp": {
+    "manifund_raised_by_year": {
+      "2024": 65553,
+      "2025": 2910
+    },
+    "manifund_total_raised": 68463,
+    "stage": "complete",
+    "external_funding": [
+      {
+        "funder": "Survival and Flourishing Fund (speculation grants)",
+        "amount_usd": 30000,
+        "year": 2024,
+        "date": "",
+        "source_url": "https://forum.effectivealtruism.org/posts/JcWbvECTj9zowFu7N/funding-case-ai-safety-camp-11",
+        "confidence": "high",
+        "note": "Organizers state AISC 10 received $30k in SFF speculation grants but no main SFF grant. Amount explicit in the organizers' own EA Forum post; exact grant date not published (inferred 2024, during the AISC 10 fundraise/run-up). Not itemized on survivalandflourishing.fund."
+      },
+      {
+        "funder": "Private donors (incl. Lucius Bushnaq and one other ~€5k donor)",
+        "amount_usd": 7500,
+        "year": 2024,
+        "date": "",
+        "source_url": "https://forum.effectivealtruism.org/posts/JcWbvECTj9zowFu7N/funding-case-ai-safety-camp-11",
+        "confidence": "medium",
+        "note": "Organizers list $7.5k from private donors for AISC 10. The earlier Dec 2023 post (forum.effectivealtruism.org/posts/fxeaew8FJzhkPCM22) mentions two €5K private pledges, so timing spans late 2023 to 2024 and the two accounts differ slightly on total."
+      },
+      {
+        "funder": "Survival and Flourishing Fund (SFF-2025 S-Process, funder Jaan Tallinn, via Ashgro Inc.)",
+        "amount_usd": 200000,
+        "year": 2025,
+        "date": "2025",
+        "source_url": "https://survivalandflourishing.fund/2025/recommendations",
+        "confidence": "high",
+        "note": "Verified in the raw SFF-2025 recommendations table: 'AI Safety Camp — $200,000 (Freedom: $200,000), Speculation: ($20,000)†, Matching: {$110,000}‡, Ashgro, Inc., General support of AI Safety Camp'. The $200k total includes a $20k speculation grant advanced earlier; an additional $110,000 matching pledge (1x match, deadline 2026-03-31) is conditional on raising outside funds and is NOT counted in the amount here. This is org-level general support (effectively funding editions after AISC 10)."
+      }
+    ],
+    "notes": "Numbers track AI Safety Camp as an org/program (organizers Remmelt Ellen and Robert Kralisch; fiscal sponsor Ashgro Inc.), not solely the 10th edition. The first two entries were raised specifically for AISC 10; the SFF-2025 $200k is general support that landed after AISC 10 ran (Jan-Apr 2025). The 11th edition raised separately on Manifund (slug 11th-edition-of-ai-safety-camp), not counted here. Searched Coefficient Giving/Open Philanthropy grants and LTFF/EA Funds payout reports: no grants to AI Safety Camp found in the 2023-2026 window (LTFF funded AISC in earlier years only; OpenPhil reportedly stopped funding this space). AISC-incubated projects have separately received ~$1.4M in follow-on grants, not counted here.",
+    "fetched_at": "2026-08-07",
+    "research_summary": "After the Dec 2023 'this might be the last AI Safety Camp' funding crisis, the 10th edition was funded (~$103k: $68.5k Manifund, $30k SFF speculation grants, $7.5k private) and ran January-April 2025 with ~30 projects. The program continued: an 11th edition fundraise followed on Manifund, and in the SFF-2025 S-Process round AI Safety Camp received $200,000 general support (via Ashgro Inc.) plus a conditional $110,000 matching pledge."
+  },
+  "finishing-the-sb-1047-documentary-in-6-weeks": {
+    "manifund_raised_by_year": {
+      "2024": 67600,
+      "2025": 51387
+    },
+    "manifund_total_raised": 118987,
+    "stage": "complete",
+    "external_funding": [
+      {
+        "funder": "Future of Life Institute",
+        "amount_usd": 20000,
+        "year": 2025,
+        "date": "",
+        "source_url": "https://forum.effectivealtruism.org/posts/cFLuvK6g8AikifmwH/sb-1047-documentary-the-post-mortem-1",
+        "confidence": "high",
+        "note": "Amount and funder explicit in Trazzi's own post-mortem (published ~June 2025): total ~$143k received = $119k Manifund + $4k Ryan Kidd regrant (on another Manifund project) + $20k FLI. Exact grant date not stated; production ran Sept 2024-May 2025, so the FLI money arrived during that window (2024 or 2025). Not found itemized on FLI's grants pages."
+      }
+    ],
+    "notes": "Numbers track this specific documentary project by Michael Trazzi (The Inside View), an individual creator project, not an organization. The $4k Ryan Kidd regrant mentioned in the post-mortem was Manifund money routed via a different Manifund project, so it is excluded from external_funding and is not in this slug's txn totals either. Searches run: FLI grant confirmation, SFF/OpenPhil-Coefficient/LTFF databases for Trazzi or the documentary (nothing found beyond the FLI $20k), and general press coverage. Manifund totals here ($118,987) match the ~$119k Trazzi reports.",
+    "fetched_at": "2026-08-07",
+    "research_summary": "The documentary overshot its plan (27 weeks and ~$157k spent vs. the planned 6 weeks/$55k), premiering on YouTube in May 2025 as 'SB-1047: The Battle For The Future Of AI'. Total funding received was ~$143k: ~$119k via Manifund donations, $4k via a Ryan Kidd Manifund regrant on another project, and $20k from the Future of Life Institute; Trazzi covered the remaining gap and published a detailed post-mortem in mid-2025."
+  },
+  "mox-a-coworking--events-space-in-sf": {
+    "manifund_raised_by_year": {
+      "2025": 251519,
+      "2026": 10301
+    },
+    "manifund_total_raised": 261820,
+    "stage": "complete",
+    "external_funding": [
+      {
+        "funder": "EA Infrastructure Fund (EAIF)",
+        "amount_usd": 50000,
+        "year": 2025,
+        "date": "",
+        "source_url": "https://manifund.substack.com/p/one-year-of-mox-and-fundraising-for",
+        "confidence": "medium",
+        "note": "Manifund's 'One year of Mox' post and the Mox 2026 Fundraiser page disclose only a combined figure: 'Grant funding (Craig Falls & EAIF): $300k'. Craig Falls' $250,000 donation appears on Manifund (Sept 2025 txn), so the EAIF portion is inferred at ~$50k. Exact EAIF amount and grant date were not published separately; treat the split as an inference from the combined $300k disclosure."
+      }
+    ],
+    "notes": "Numbers track Mox the coworking/events space (operated by Manifund; creator account 'mox'). Manifund itself put in ~$500k of internal subsidy ('Grant funding (Manifund): $500k' per the one-year retrospective) — that is Manifund's own money, not external, and is excluded from external_funding. Mox also generated ~$600k in earned revenue (memberships/offices/events) through early 2026, which is revenue, not grants. The Feb 2026 EA Forum post says Mox 'raised in total $550k' in year 1 against a $1.6M minimal budget. A separate Manifund project 'mox-2026-fundraiser' (with an anonymous 1:1 match up to $100k) is not counted in this slug's manifund_raised_by_year. Searched Coefficient Giving/Open Phil, SFF-2025 recommendations (fetched — no Mox/Manifund grant), and EAIF/EA Funds sources.",
+    "fetched_at": "2026-08-07",
+    "research_summary": "Mox launched Feb 15, 2025 as a 20,000 sq ft, 2-floor coworking and events space in SF and became the city's largest AI safety / EA community hub. It fell well short of its year-1 funding tiers ($1.6M-$3.6M), raising ~$550k in grants (Manifund subsidy $500k counted separately; Craig Falls & EAIF $300k combined) while generating ~$600k of earned revenue. In Feb 2026 it opened a year-2 fundraiser seeking $450k (deployable up to $1.2M), projecting $1.4M in 2026 revenue."
+  },
+  "creating-making-god-an-accessible-feature-documentary-on-risks-from-agi": {
+    "manifund_raised_by_year": {
+      "2025": 205094
+    },
+    "manifund_total_raised": 205094,
+    "stage": "complete",
+    "external_funding": [
+      {
+        "funder": "Private investors (unnamed, via Tail End Films project-level investment raise)",
+        "amount_usd": 400000,
+        "year": 2026,
+        "date": "",
+        "source_url": "https://manifund.org/projects/making-gods-post-production-aiming-for-netflix",
+        "confidence": "medium",
+        "note": "Post-production Manifund page reports '$400,000 promised in private investment' and '$350,000 received so far through a mix of donations and investments'. On July 15, 2026 Connor Axiotes announced the film is 'fully financed (with a $1.6 million ring fenced budget) at project level through its private investment raise' — implying total private investment well above $400k, but no itemized investor amounts were published. The $400k is the only explicitly quantified investment commitment; investors are not named."
+      }
+    ],
+    "notes": "Numbers track the 'Making God' documentary (Connor Axiotes / director Mike Narouei; produced via Tail End Films Ltd, a UK company), not Axiotes personally. This slug raised $205,094 on Manifund, all in 2025 (largest: $150k from Anton Makiievskyi, May 2025). A second Manifund project 'making-gods-post-production-aiming-for-netflix' raised only ~$550 and is excluded here. External funding is private film investment rather than grants: searched SFF-2025 recommendations (fetched — no Tail End Films/Axiotes grant), LTFF/EA Funds payout reports, and Coefficient Giving — no grants found from any of them. The July 2026 '$1.6M ring-fenced budget, fully financed' claim could not be broken into per-investor amounts.",
+    "fetched_at": "2026-08-07",
+    "research_summary": "The documentary filmed through 2025 (interviews include Geoffrey Hinton and Yoshua Bengio), raised ~$205k on Manifund plus off-platform money ('well over $300,000' total by June 2025 per Axiotes), then pivoted from donations to private film financing. A post-production Manifund page targeting $327.5k raised almost nothing, but by July 15, 2026 Axiotes announced the film was fully financed at project level with a $1.6M ring-fenced budget via a private investment raise, closed the Manifund page to donations, and is aiming for festivals and streamer acquisition (Netflix/Amazon/Apple TV+), with release expected later in 2026."
+  },
+  "next-steps-in-developmental-interpretability": {
+    "manifund_raised_by_year": {
+      "2024": 80460,
+      "2025": 220
+    },
+    "manifund_total_raised": 80680,
+    "stage": "active",
+    "external_funding": [
+      {
+        "funder": "Survival and Flourishing Fund (SFF-2024 round)",
+        "amount_usd": 343000,
+        "year": 2024,
+        "date": "2024",
+        "source_url": "https://survivalandflourishing.fund/",
+        "confidence": "high",
+        "note": "Listed as $343,000 to Ashgro Inc. (fiscal sponsor) for 'General Support of Timaeus' in the SFF-2024 grant table."
+      },
+      {
+        "funder": "Open Philanthropy (now Coefficient Giving)",
+        "amount_usd": 1557000,
+        "year": 2025,
+        "date": "2025-01",
+        "source_url": "http://web.archive.org/web/20250716084341/https://www.openphilanthropy.org/grants/timaeus-operating-expenses/",
+        "confidence": "high",
+        "note": "Grant page 'Timaeus — Operating Expenses': two grants totaling $1,557,000 to Timaeus Research, award date January 2025. Original openphilanthropy.org URL now redirects to coefficientgiving.org, so the verified source is the Wayback snapshot."
+      },
+      {
+        "funder": "Survival and Flourishing Fund (SFF-2025 round)",
+        "amount_usd": 70000,
+        "year": 2025,
+        "date": "2025",
+        "source_url": "https://survivalandflourishing.fund/",
+        "confidence": "high",
+        "note": "Unconditional portion of SFF-2025 grant to Timaeus Research Inc. for 'General support'."
+      },
+      {
+        "funder": "Survival and Flourishing Fund (SFF-2025 matching pledge)",
+        "amount_usd": 206000,
+        "year": 2025,
+        "date": "2025",
+        "source_url": "https://survivalandflourishing.fund/",
+        "confidence": "medium",
+        "note": "Listed as $206,000 matching pledge to Timaeus Research Inc. — distributed conditional on Timaeus raising outside funds; unclear how much was actually paid out."
+      }
+    ],
+    "notes": "Numbers track Timaeus the organization (AI safety research org founded Oct 2023; Jesse Hoogland is Executive Director), not just the specific hires/compute in this Manifund proposal — the proposal was effectively org-level fundraising. Pre-window funding excluded: $455,000 SFF-2023-H2 grant (via Ashgro) and the original ~$145k 2023 Manifund devinterp project. Timaeus also reports funding from UK AISI (partnership/funding mentioned in their 'Timaeus in 2024' LessWrong post and 2026 hiring page) with no public amount, so it is noted here rather than given a number. Timaeus reported ~$2.5M total funding for 2025.",
+    "fetched_at": "2026-08-07",
+    "research_summary": "Timaeus continued and scaled substantially after the July 2024 proposal: from a team of ~8 at end-2024 with ~$2.5M in 2025 funding to roughly 20 people across Berkeley, Melbourne, and London hubs by 2026, publishing extensively on singular learning theory and developmental interpretability. Major external support arrived via SFF ($343k in 2024; $70k + $206k matching pledge in 2025) and a $1.557M Open Philanthropy/Coefficient Giving operating-expenses grant in January 2025, plus UK AISI funding of undisclosed size."
+  },
+  "evaluating-llm-safety-in-a-multilingual-world": {
+    "manifund_raised_by_year": {},
+    "manifund_total_raised": 0,
+    "stage": "not funded",
+    "external_funding": [],
+    "notes": "Numbers track Ola Mardawi as an individual researcher (cybersecurity lecturer at University College Birmingham / Oxford DPhil-track applicant); there is no organization behind this project. The Manifund proposal received $0 and is listed as 'Not funded'; the proposal itself states other funding = 'Nothing till now'. Searched 4 angles (name + AI safety, name + multilingual/Arabic LLM safety grant, name + grant funding 2025, name vs LTFF/EA Funds payout reports) and found no external grants to this person or project through August 2026 — empty external_funding is the finding, not a gap in search.",
+    "fetched_at": "2026-08-07",
+    "research_summary": "The project appears not to have proceeded in a funded form: it raised nothing on Manifund and no external grants, publications, or announcements tied to this specific project were found. Ola Mardawi remains listed as a lecturer at University College Birmingham teaching AI governance, risk, and safety; no LTFF, Open Philanthropy/Coefficient Giving, or SFF grants to her were located."
+  },
+  "funding-researcher-on-frontier-ai-governance-inclusive-of-global-majority-": {
+    "manifund_raised_by_year": {
+      "2025": 87543
+    },
+    "manifund_total_raised": 87543,
+    "stage": "active",
+    "external_funding": [],
+    "notes": "Numbers track a pseudonymous individual, 'H' — a researcher accepted to a UK Computer Science PhD program, with prior work with UK DSIT, Oxford Martin School, GovAI, CSER, and IAPS. The single $87,543 Manifund donation came from JueYan Zhang's AI Safety Tactical Opportunities Fund (AISTOF), which is a regrant made ON Manifund, not external funding. Because the creator is pseudonymous, external funding is essentially untraceable: searched (1) the project topic + Manifund/PhD funding, (2) pseudonymous researcher + affiliations (DSIT, GovAI, CSER, IAPS, global majority), (3) AISTOF public grant lists, and (4) AI-governance PhD scholarship/fellowship announcements 2025-2026. No external grants attributable to this person were found; the project notes H was ineligible for UK student loans, consistent with no other funding at proposal time.",
+    "fetched_at": "2026-08-07",
+    "research_summary": "H, a pseudonymous researcher, was fully funded in a single $87,543 AISTOF regrant (via JueYan Zhang) on 2025-07-22 to cover first-year UK PhD tuition (~£33,370), living expenses (~£24,420), and visa fees (~£6,500) for research on frontier AI governance inclusive of the global majority. Because the recipient is pseudonymous, there is no public post-grant trail; no external funding to this individual could be identified."
+  },
+  "scaling-ai-safety-awareness-via-content-creators": {
+    "manifund_raised_by_year": {
+      "2025": 21309
+    },
+    "manifund_total_raised": 21309,
+    "stage": "active",
+    "external_funding": [],
+    "notes": "External funding tracks CeSIA (Centre pour la Sécurité de l'IA / French Center for AI Safety, a French nonprofit that grew out of EffiSciences' AI division) as an organization — the Manifund project funded only one specific program (content-creator advisory work, ~1 FTE). No quantified external grants were found within the window (proposal year 2025 through Aug 2026). Known pre-window grants: SFF-2024 recommended $48,000 (funder Jaan Tallinn, receiving charity EffiSciences, 'General support of CeSIA', https://survivalandflourishing.fund/recommendations) and Effektiv Spenden's Safeguarding the Future fund ~€195,000 (H1/2024 allocation, disbursed Sept 2024, https://effektiv-spenden.org/en/safeguarding-the-future/). CeSIA's Dec 2024 announcement also lists Longview Philanthropy, AISTOF, a Swedish foundation, Erasmus+, and Ryan Kidd via Manifund as funders without amounts (https://www.lesswrong.com/posts/rCLs56wfissFheLap/announcing-cesia-the-french-center-for-ai-safety). For 2025-2026, CeSIA's site (https://cesia.org/en/about/) says it is funded by the European Commission, ENS, UK AI Security Institute (UK AISI), and European/British philanthropies — the UK AISI and some EC funding likely falls in-window, but no amounts or dates are public, so no entries were recorded. CeSIA/EffiSciences does NOT appear in SFF-2025 recommendations, and no Coefficient Giving (Open Philanthropy) or LTFF/EA Funds grants to CeSIA were found.",
+    "fetched_at": "2026-08-07",
+    "research_summary": "CeSIA fully funded this project on Manifund ($21,309 vs a $21,000 goal, June 2025) and continued growing as France's main AI safety org through 2025-2026: advising on the French national AI evaluation lab, participating in the EU GPAI Code of Practice and UN Global Dialogue on AI Governance, and continuing creator-advisory work (e.g., the Ego video with 4M+ views predated the ask). Its disclosed 2025-2026 funders are the European Commission, ENS, UK AISI, and European/British philanthropies, but no public grant amounts in that window could be verified; its major quantified grants (SFF $48k; Effektiv Spenden ~€195k) date to 2024, before the proposal."
+  },
+  "testing-and-spreading-messages-to-reduce-ai-x-risk": {
+    "manifund_raised_by_year": {
+      "2024": 7600,
+      "2025": 5000
+    },
+    "manifund_total_raised": 12600,
+    "stage": "active",
+    "external_funding": [
+      {
+        "funder": "Survival and Flourishing Fund (speculation grant)",
+        "amount_usd": 10400,
+        "date": "",
+        "year": 2024,
+        "source_url": "https://manifund.org/projects/testing-and-spreading-messages-to-reduce-ai-x-risk",
+        "confidence": "low",
+        "note": "Grant existence is well-attested (Michael Dickens' Dec 2024 comment on the Manifund page: 'The project received a speculation grant from the Survival and Flourishing Fund (SFF)'), but no public amount exists. The $10,400 figure is an ESTIMATE inferred from the creator's March 2025 progress update stating ~$23k fundraised total, minus $12,600 raised on Manifund. SFF does not publish individual speculation grant amounts; AISGF/Samin does not appear in SFF's published S-process recommendation lists (2019-2025, checked survivalandflourishing.fund and /recommendations)."
+      }
+    ],
+    "notes": "Numbers track the AI Safety and Governance Fund (AISGF), Mikhail Samin's org (Samin is also ED of the AI Governance and Safety Institute / AIGSI; the entities overlap and public sources do not clearly separate them). Manifund total includes $700 the creator donated to his own project during EA Community Choice and $96 in quadratic matching. External funding confirmed only as an SFF speculation grant of unpublished size (amount above is an inference, see note); their SFF S-process application was under evaluation in late 2024 but AISGF/AIGSI appears in no published SFF round list through 2025. Searched: SFF main/recommendations/speculation-grants pages, LTFF/EA Funds, Coefficient Giving (formerly Open Philanthropy) via web search, LessWrong/EA Forum. Creator stated in March 2025 that total fundraised (~$23k) was under half their minimum viable budget.",
+    "fetched_at": "2026-08-07",
+    "research_summary": ""
+  },
+  "compute-for-4-mats-scholars-to-rapidly-scale-promising-new-method-pre-iclr": {
+    "manifund_raised_by_year": {
+      "2024": 16047
+    },
+    "manifund_total_raised": 16047,
+    "stage": "active",
+    "external_funding": [
+      {
+        "funder": "Long-Term Future Fund (EA Funds)",
+        "amount_usd": 160000,
+        "date": "2024 Q3 round",
+        "year": 2024,
+        "source_url": "https://funds.effectivealtruism.org/grants",
+        "confidence": "high",
+        "note": "EA Funds public grants database record recMGDHQEr7Zyo125: grantee 'Alex Cloud, Jacob Goldman-Wetzler, Evžen Wybitul, Joseph Miller', $160,000, 2024 Q3, '6-month stipends to develop and apply a novel method for localizing information and computation in neural networks' (the gradient routing project). Verified by fetching the page HTML directly (data is embedded in the page)."
+      },
+      {
+        "funder": "MATS Program (compute budget)",
+        "amount_usd": 5350,
+        "date": "2024",
+        "year": 2024,
+        "source_url": "https://manifund.org/projects/compute-for-4-mats-scholars-to-rapidly-scale-promising-new-method-pre-iclr",
+        "confidence": "medium",
+        "note": "Proposal states MATS provided ~$5,350 of compute for the team; program-provided in-kind support rather than a cash grant."
+      }
+    ],
+    "notes": "Numbers track this specific 4-person MATS 6.0 scholar team (Alex Cloud, Jacob Goldman-Wetzler, Evžen Wybitul, Joseph Miller; mentor Alex Turner), not any organization. Manifund ask was fully funded in one $16,047 donation by regrantor Neel Nanda (Aug 2024). Outcome: 'Gradient Routing: Masking Gradients to Localize Computation in Neural Networks' (arXiv:2410.04332); Manifund funds were credited as critical for Table 1 results; submitted to ICLR 2025 then resubmitted to ICML. The team's LTFF $160k covered 6-month post-MATS stipends; they had also applied to FAR AI, with no public record of a resulting grant found. Alex Cloud subsequently joined Anthropic (co-author of the 2025 subliminal learning paper) — employment, not grant funding.",
+    "fetched_at": "2026-08-07",
+    "research_summary": ""
+  },
+  "funding-to-present-a-poster-at-the-icml-technical-ai-governance-workshop": {
+    "manifund_raised_by_year": {},
+    "manifund_total_raised": 0,
+    "stage": "not funded",
+    "external_funding": [
+      {
+        "funder": "ICML 2025 Technical AI Governance (TAIG) workshop (travel grant from the workshop organizers)",
+        "amount_usd": 1000,
+        "year": 2025,
+        "date": "2025-07",
+        "source_url": "https://manifund.org/projects/retroactive-presenting-a-poster-at-the-icml-technical-ai-governance-workshop",
+        "confidence": "high",
+        "note": "Self-reported by Evžen Wybitul in his retroactive Manifund writeup: 'I've gotten a grant of $1000 from the workshop itself, hence I'm seeking the remaining $1300.' The grant covered part of his ~$2,300 ICML Vancouver travel costs."
+      }
+    ],
+    "notes": "Numbers track Evžen Wybitul as an individual (solo Master's student at ETH Zurich at proposal time), not any org. This specific project closed 'not funded' with $0 raised and zero transactions on Manifund. However, Wybitul attended ICML anyway (self-funded plus a $1,000 grant from the workshop itself) and refiled the same ask as a sibling Manifund project, slug 'retroactive-presenting-a-poster-at-the-icml-technical-ai-governance-workshop', which raised $1,300 from Ryan Kidd on 2025-11-24 (Manifund money, so excluded from external_funding and from this slug's manifund_raised_by_year). Other context found: he did the Talos AI Governance Fellowship and started a funded DPhil at Oxford's AIMS CDT (per aigi.ox.ac.uk/people/evzen-wybitul/) — the studentship presumably covers fees+stipend but no public dollar amount, so no entry recorded. Pre-window (2024): as part of Team Shard he shared an LTFF 6-month stipend grant (with Alex Cloud, Jacob Goldman-Wetzler, Joseph Miller) for gradient routing, plus Neel Nanda/Manifund compute funding, per his own proposal text; amounts not published, and it predates the 2025 window. Searches: name+grant, name+LTFF/EA Funds payouts, LTFF payout report pages, Oxford/Talos bio pages.",
+    "fetched_at": "2026-08-07",
+    "research_summary": "The original proposal expired unfunded, but Wybitul attended ICML 2025 in Vancouver anyway, presenting his solo paper on verification-based access controls at the TAIG workshop. He covered costs with personal funds plus a $1,000 travel grant from the workshop, and in November 2025 recouped the remaining $1,300 via a retroactive Manifund project funded by Ryan Kidd. He has since transitioned into technical AI governance: he completed the Talos AI Governance Fellowship and began a DPhil at Oxford's AIMS CDT, filing a final report in May 2026 confirming the trip served its career-transition purpose."
+  },
+  "genesis-protocol-building-safe-transparent-agi": {
+    "manifund_raised_by_year": {},
+    "manifund_total_raised": 0,
+    "stage": "not funded",
+    "external_funding": [],
+    "notes": "Numbers track Robert Looman as a solo individual; GENESIS is a one-person bootstrapped project with no org entity found. The Manifund proposal closed 'not funded' with $0 raised, zero transactions, and a negative community score (-2). Looman himself stated in the proposal (July 2025) that he had raised no external funding, was bootstrapping from personal savings, and had pending applications to Emergent Ventures and Nonlinear. Genuine null finding after searching: (1) 'Robert Looman GENESIS symbolic AGI', (2) GENESIS Protocol + Emergent Ventures/token-speed claims, (3) Looman in Emergent Ventures/Mercatus grantee coverage, (4) 'GENESIS Protocol AGI funding raised'. No grant announcement, press coverage, EA Forum/LessWrong post, or grantee listing mentions him or the project; search hits were unrelated entities (Genesis AI robotics startup, DOE Genesis Mission, a Royal Academy of Music flutist named Robert Looman).",
+    "fetched_at": "2026-08-07",
+    "research_summary": "The project received no Manifund donations and no traceable external funding through August 2026. No evidence was found that the pending Emergent Ventures or Nonlinear applications mentioned in the proposal resulted in grants, and the project has no discoverable public footprint (no papers, repos in search results, press, or grantee listings) after the proposal."
+  },
+  "help-apart-expand-global-ai-safety-research": {
+    "manifund_raised_by_year": {
+      "2024": 17732
+    },
+    "manifund_total_raised": 17732,
+    "stage": "active",
+    "external_funding": [
+      {
+        "funder": "Survival and Flourishing Fund (funder: Jaan Tallinn; receiving charity Ashgro Inc.)",
+        "amount_usd": 294000,
+        "year": 2024,
+        "date": "2024",
+        "source_url": "https://survivalandflourishing.fund/2024/recommendations",
+        "confidence": "high",
+        "note": "SFF-2024 S-Process Main Track recommendation, 'General support of Apart Research'. Verified on the SFF 2024 recommendations page."
+      },
+      {
+        "funder": "LTFF + Foresight Institute + ACX Grants (aggregate, self-reported)",
+        "amount_usd": 500000,
+        "year": 2024,
+        "date": "",
+        "source_url": "https://manifund.org/projects/apart-research-research-and-talent-acceleration",
+        "confidence": "medium",
+        "note": "Apart's late-2024 Manifund proposal states: 'In the past 12 months, we've raised over $500,000 from a combination of sources including LTFF, Foresight Institute, and ACX Grants.' No per-funder breakdown; window is roughly calendar 2024 and could partially overlap the SFF grant depending on what 'sources including' covers."
+      },
+      {
+        "funder": "Individual donors (2025 'Help Save Apart' emergency fundraiser)",
+        "amount_usd": 619921,
+        "year": 2025,
+        "date": "2025-06",
+        "source_url": "https://apartresearch.com/donate/2025",
+        "confidence": "medium",
+        "note": "Fundraiser page shows $619,921 raised toward the $954,800 goal and states the fundraiser is over. Mix of many individual donations; treated as one aggregate line. Their parallel 2025 Manifund project page shows $0, so this appears to be outside Manifund."
+      }
+    ],
+    "notes": "Numbers track Apart Research the organization (global AI-safety hackathon/fellowship nonprofit, fiscally sponsored by Ashgro Inc. for the SFF grant), not solely the specific expansion plan in this Manifund proposal. Known but unquantified funding excluded from the table: 'a few smaller grants' from Open Philanthropy (per Apart's own EA Forum statements, no amounts published; nothing findable in OP/Coefficient Giving search results), project sponsorships of $1k-$20k from Apollo Research, EntrepreneurFirst, CAIF, and a $5k Lambda Labs compute sponsorship. A GBP 60,000 UK AISI research grant (~$76k, 2025) went to a team Apart supported, not to Apart itself, so it is excluded. LTFF declined Apart's 2025 renewal (despite a high rating, due to LTFF's own funding shortage), which triggered the May-June 2025 emergency fundraiser.",
+    "fetched_at": "2026-08-07",
+    "research_summary": "Apart Research kept operating and growing after the Dec 2023 proposal: it received a $294k SFF grant in 2024 and self-reported $500k+ raised in 2024 from LTFF, Foresight Institute, and ACX Grants. In spring 2025 an LTFF pass left it with a funding crisis; a public 'Help Save Apart' campaign sought $954,800 and closed at about $620k, keeping the org alive. As of Nov 2025 it was still active (EA Forum Marginal Funding Week post), running hackathons, the Studio, and Fellowship programs, with research used by Anthropic, UK AISI, and the EU AI Office."
+  },
+  "govt-action-kit": {
+    "manifund_raised_by_year": {},
+    "manifund_total_raised": 0,
+    "stage": "not funded",
+    "external_funding": [],
+    "notes": "Tracks this specific project (mailing AI-safety info kits with Darren McKee's 'Uncontrollable' to ~600 US federal officials and ~200 media outlets) by individual Louis S. Berman, a PauseAI US volunteer/lobbyist — not PauseAI US the org, which has separate funding (e.g. a $450k operations raise) not attributable to this kit. Searches performed: 'Louis Berman Gov't Action Kit / Government Action Kit AI policy'; 'Louis Berman PauseAI grant funding'; 'Louis Berman AI Endgame / LTFF / Lightspeed / Nonlinear grant'; 'PauseAI action kit GoFundMe Uncontrollable congress raised'; plus SFF 2024/2025 grant lists (no Louis Berman, PauseAI, or Gov't Action Kit entries). No external grants to this project were found. The Manifund page shows 'Not funded' ($0 raised, matching zero txns); Berman had pledged $10,000 of his own money and named GoFundMe/Nonlinear Network as intended sources, but there is no evidence any of that materialized.",
+    "fetched_at": "2026-08-07",
+    "research_summary": "The project was not funded on Manifund (below its $20,001 minimum) and no evidence was found that the kit was produced or that it received outside funding. Berman remained active in AI-risk advocacy: he continued grassroots lobbying of Congress with PauseAI US and published the 2025 book 'Catastrophe: The Unstoppable Threat of AI' (following 'AI Endgame'), and appeared on the For Humanity podcast."
+  }
+}
