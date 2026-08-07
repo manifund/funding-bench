@@ -71,7 +71,10 @@ async function fetchAllProjects(): Promise<ApiProject[]> {
     if (!res.ok) throw new Error(`Manifund API ${res.status} for ${url}`);
     const batch = (await res.json()) as ApiProject[];
     if (batch.length === 0) break;
-    all.push(...batch);
+    // `before` is strict-exclusive, so projects sharing the boundary timestamp
+    // could repeat or be skipped; dedupe by id as a safeguard.
+    const seen = new Set(all.map((p) => p.id));
+    all.push(...batch.filter((p) => !seen.has(p.id)));
     before = batch[batch.length - 1].created_at;
     process.stdout.write(`\rfetched ${all.length} projects…`);
   }
@@ -168,14 +171,29 @@ async function main() {
 
   const groundTruth: Record<string, any> = {};
   for (const p of selected) {
+    // NOTE: this endpoint's txns carry {amount, token} only — no dates — so
+    // manifundRaisedByYear() comes back empty here. Yearly breakdowns are
+    // researched separately (merge-research.ts); never clobber them with {}.
+    const recomputedByYear = manifundRaisedByYear(p);
+    const existingByYear = existing[p.slug]?.manifund_raised_by_year ?? {};
+    const byYear =
+      Object.keys(recomputedByYear).length > 0 ? recomputedByYear : existingByYear;
+    const total = Math.round(
+      (p.txns ?? []).filter((t) => !t.token || t.token === "USD").reduce((s, t) => s + t.amount, 0)
+    );
+    const bySum = Object.values(byYear as Record<string, number>).reduce((s, v) => s + v, 0);
+    if (Object.keys(byYear).length > 0 && Math.abs(bySum - total) > 2) {
+      console.warn(
+        `WARNING ${p.slug}: yearly sum $${bySum} != total $${total} — yearly data may be stale`
+      );
+    }
     groundTruth[p.slug] = {
-      manifund_raised_by_year: manifundRaisedByYear(p),
-      manifund_total_raised: Math.round(
-        (p.txns ?? []).filter((t) => !t.token || t.token === "USD").reduce((s, t) => s + t.amount, 0)
-      ),
+      manifund_raised_by_year: byYear,
+      manifund_total_raised: total,
       stage: p.stage,
       external_funding: existing[p.slug]?.external_funding ?? [],
       notes: existing[p.slug]?.notes ?? "",
+      research_summary: existing[p.slug]?.research_summary ?? "",
       fetched_at: new Date().toISOString().slice(0, 10),
     };
   }

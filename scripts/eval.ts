@@ -11,10 +11,10 @@
 
 import { init, id, lookup } from "@instantdb/admin";
 import schema from "../src/instant.schema";
+import { PROMPT_VERSION } from "../src/lib/config";
 import { getFunders, getGroundTruth, getProposals } from "../src/lib/data";
 import type { EvalOutput, FunderRubric, Proposal } from "../src/lib/types";
 
-const PROMPT_VERSION = "v1";
 const PREDICT_THROUGH_YEAR = 2028;
 const CONCURRENCY = 20;
 const MAX_TOKENS = 8000; // reasoning models spend completion tokens on thinking
@@ -88,14 +88,44 @@ End your response with exactly one JSON code block:
   return { system, user };
 }
 
+/** Every balanced {...} substring starting at a "grant_rec_usd"-containing brace, outermost first. */
+function balancedJsonCandidates(text: string): string[] {
+  const out: string[] = [];
+  for (let i = text.indexOf("{"); i >= 0; i = text.indexOf("{", i + 1)) {
+    let depth = 0;
+    for (let j = i; j < text.length; j++) {
+      if (text[j] === "{") depth++;
+      else if (text[j] === "}" && --depth === 0) {
+        const cand = text.slice(i, j + 1);
+        if (cand.includes("grant_rec_usd")) out.push(cand);
+        break;
+      }
+    }
+  }
+  return out;
+}
+
 function parseOutput(text: string): EvalOutput {
   const blocks = [...text.matchAll(/```(?:json)?\s*([\s\S]*?)```/g)].map((m) => m[1]);
-  const candidates = blocks.length ? blocks.reverse() : [text.slice(text.lastIndexOf("{"))];
+  const candidates = [...blocks.reverse(), ...balancedJsonCandidates(text)];
   for (const c of candidates) {
     try {
       const obj = JSON.parse(c.trim());
-      if (typeof obj.grant_rec_usd === "number" && obj.raise_by_year_usd && typeof obj.raise_by_year_usd === "object") {
-        return obj as EvalOutput;
+      if (
+        typeof obj.grant_rec_usd === "number" &&
+        obj.raise_by_year_usd &&
+        typeof obj.raise_by_year_usd === "object" &&
+        !Array.isArray(obj.raise_by_year_usd)
+      ) {
+        // coerce numeric strings; reject anything else so bad values can't
+        // silently corrupt scoring
+        const byYear: Record<string, number> = {};
+        for (const [year, v] of Object.entries(obj.raise_by_year_usd)) {
+          const n = typeof v === "number" ? v : Number(v);
+          if (!Number.isFinite(n)) throw new Error(`non-numeric raise for ${year}`);
+          byYear[year] = n;
+        }
+        return { grant_rec_usd: obj.grant_rec_usd, raise_by_year_usd: byYear };
       }
     } catch {
       // try next candidate

@@ -1,6 +1,7 @@
 'use client';
 
 import { useMemo, useState } from 'react';
+import { PROMPT_VERSION } from '@/lib/config';
 import { db } from '@/lib/db';
 import {
   LAST_ACTUAL_YEAR,
@@ -29,7 +30,9 @@ export default function ResultsClient({
   groundTruth: GroundTruthMap;
   funders: FunderRubric[];
 }) {
-  const { data, isLoading, error } = db.useQuery({ evals: {} });
+  const { data, isLoading, error } = db.useQuery({
+    evals: { $: { where: { promptVersion: PROMPT_VERSION } } },
+  });
   const [selected, setSelected] = useState<string | null>(null);
 
   const cells = (data?.evals ?? []) as unknown as EvalCell[];
@@ -58,7 +61,9 @@ export default function ResultsClient({
         Cell = median |log₁₀(predicted/actual)| across projects (0 = perfect,
         1 = off by 10×), and Spearman rank correlation (ρ) between predicted
         and actual totals. Predictions summed from proposal year through{' '}
-        {LAST_ACTUAL_YEAR}. Live from InstantDB — {cells.length} evals
+        {LAST_ACTUAL_YEAR} (note: {LAST_ACTUAL_YEAR} actuals only run through
+        Aug {LAST_ACTUAL_YEAR}, so full-year predictions score slightly hot).
+        Prompt {PROMPT_VERSION}, live from InstantDB — {cells.length} evals
         {failed > 0 && `, ${failed} failed`}.
       </p>
 
