@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { getFunders, getProposals } from '@/lib/data';
+import ScoreHeadline from '@/components/score-headline';
+import { getFunders, getGroundTruth, getProposals } from '@/lib/data';
 
 export default function Home() {
   const proposals = getProposals();
@@ -25,6 +26,18 @@ export default function Home() {
           of a real funder, to (1) recommend a grant amount and (2) predict how
           much the project will actually raise, year by year. Predictions are
           scored against what happened.
+        </p>
+      </section>
+
+      <section>
+        <h2 className="text-lg font-bold">
+          FundingBench Score <span className="text-orange-600">over time</span>
+        </h2>
+        <ScoreHeadline proposals={getProposals()} groundTruth={getGroundTruth()} />
+        <p className="mt-2 text-sm">
+          <Link href="/results" className="underline hover:text-orange-600">
+            full results →
+          </Link>
         </p>
       </section>
 

@@ -41,16 +41,27 @@ export default function ScoreChart({ points }: { points: ScorePoint[] }) {
   const fmtTick = (dt: Date) =>
     dt.getUTCMonth() === 0 ? String(dt.getUTCFullYear()) : `Jul ${dt.getUTCFullYear()}`;
 
-  // direct labels: above-right by default; flip below when crowding the
-  // previous label or the top edge
-  const placed: { px: number; side: 'up' | 'down' }[] = [];
-  const labelSide = (px: number, py: number): 'up' | 'down' => {
-    const prev = placed[placed.length - 1];
-    let side: 'up' | 'down' = py < M.top + 16 ? 'down' : 'up';
-    if (prev && px - prev.px < 90 && prev.side === side)
-      side = side === 'up' ? 'down' : 'up';
-    placed.push({ px, side });
-    return side;
+  // Direct labels: centered above the dot by default. When two points are
+  // close in x, split them horizontally — left member's label goes left of
+  // its dot, right member's goes right — so labels never cover a neighbor.
+  const xs = pts.map((p) => x(Date.parse(p.released)));
+  type Placement = { anchor: 'start' | 'middle' | 'end'; lx: number; ly: number; scoreDy?: number };
+  const placement = (i: number, px: number, py: number): Placement => {
+    const crowded = xs.some((ox, j) => j !== i && Math.abs(ox - px) < 90);
+    if (crowded) {
+      const isLeft = !xs.some((ox, j) => j !== i && Math.abs(ox - px) < 90 && ox < px);
+      if (isLeft) return { anchor: 'end', lx: px - 12, ly: py + 4, scoreDy: -12 };
+      // right member: label to the right, unless that would clip the edge —
+      // then drop it below the dot, right-aligned
+      return px + 100 > W - M.right
+        ? { anchor: 'end', lx: px + 6, ly: py + 20 }
+        : { anchor: 'start', lx: px + 12, ly: py + 4 };
+    }
+    return {
+      anchor: px > W - M.right - 90 ? 'end' : px < M.left + 60 ? 'start' : 'middle',
+      lx: px,
+      ly: py < M.top + 30 ? py + 18 : py - 10,
+    };
   };
 
   return (
@@ -102,13 +113,11 @@ export default function ScoreChart({ points }: { points: ScorePoint[] }) {
         </g>
       ))}
       {/* points + direct labels */}
-      {pts.map((p) => {
+      {pts.map((p, i) => {
         const px = x(Date.parse(p.released));
         const py = y(p.score);
-        const side = labelSide(px, py);
-        const ly = side === 'up' ? py - 10 : py + 18;
-        const anchor: 'start' | 'middle' | 'end' =
-          px > W - M.right - 90 ? 'end' : px < M.left + 60 ? 'start' : 'middle';
+        const { anchor, lx, ly, scoreDy: dyOverride } = placement(i, px, py);
+        const scoreDy = dyOverride ?? (ly <= py ? -11 : 12);
         return (
           <g key={p.label}>
             <circle
@@ -125,7 +134,7 @@ export default function ScoreChart({ points }: { points: ScorePoint[] }) {
               </title>
             </circle>
             <text
-              x={px}
+              x={lx}
               y={ly}
               textAnchor={anchor}
               className="fill-neutral-700 dark:fill-neutral-300 text-[11px]"
@@ -133,8 +142,8 @@ export default function ScoreChart({ points }: { points: ScorePoint[] }) {
               {p.label}
             </text>
             <text
-              x={px}
-              y={ly + (side === 'up' ? -11 : 12)}
+              x={lx}
+              y={ly + scoreDy}
               textAnchor={anchor}
               className="fill-neutral-500 text-[10px]"
             >
